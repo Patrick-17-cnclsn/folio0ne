@@ -65,7 +65,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <header>
           <h4 className="text-2xl font-semibold">More resources</h4>
         </header>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-6">
           {products.slice(0, 2).map((product: Product) => (
             <ProductListItem product={product} key={product.id} />
           ))}

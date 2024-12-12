@@ -6,8 +6,8 @@ import { Blog } from "@/type/blog";
 
 export default function BlogListItem({ blog }: { blog: Blog }) {
   return (
-    <div className="grid grid-cols-3 items-start space-x-4">
-      <div className="col-span-2 flex flex-col space-y-4 leading-none grow">
+    <div className="grid grid-cols-1 lg:grid-cols-3 items-start lg:space-x-4">
+      <div className="order-2 lg:order-1 col-span-2 flex flex-col space-y-4 leading-none grow">
         <span className="text-sm text-muted-foreground">{blog.date}</span>
         <h4 className="font-medium text-2xl">{blog.title}</h4>
         <hr />
@@ -19,13 +19,16 @@ export default function BlogListItem({ blog }: { blog: Blog }) {
           </Button>
         </div>
       </div>
-      <Link href={`/blog/${blog.slug}`}>
-        <figure className="mt-8">
+      <Link
+        href={`/blog/${blog.slug}`}
+        className="block w-full order-1 lg:order-2"
+      >
+        <figure className="mt-8 mb-2 lg:mb-0">
           <Image
             src={blog.image}
             width={300}
             height={300}
-            className="w-[150px]"
+            className="w-full lg:w-[150px]"
             alt={blog.title}
           />
         </figure>

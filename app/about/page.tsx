@@ -12,8 +12,8 @@ export default function Page() {
   return (
     <>
       <section>
-        <header className="pb-8 space-y-4 mb-10 grid grid-cols-3 gap-4">
-          <div className="col-span-2">
+        <header className="pb-8 space-y-4 mb-10 grid lg:grid-cols-3 gap-4">
+          <div className="order-1 lg:order-2 col-span-2">
             <h1 className="text-4xl font-semibold flex flex-col mb-6">
               <span>Hello! I’m Toby</span>{" "}
               <span className="text-primary">Frontend Developer</span>
