@@ -12,7 +12,10 @@ const inter = Nunito({
 export const metadata: Metadata = {
   title: "Neofolio - Portfolio Template",
   description:
-    "With Neofolio, a dashboard-style portfolio website template built with Next.js and Shadcn/ui, you can present yourself online in an ideal way.",
+    "With Neofolio, a dashboard-style portfolio website template built with Next.js and shadcn/ui, you can present yourself online in an ideal way.",
+  openGraph: {
+    images: ["https://bundui-images.netlify.app/templates/neofolio/seo.jpg"],
+  },
 };
 
 export default function RootLayout({
