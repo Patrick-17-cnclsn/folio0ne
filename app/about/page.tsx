@@ -13,7 +13,7 @@ export default function Page() {
     <>
       <section>
         <header className="pb-8 space-y-4 mb-10 grid lg:grid-cols-3 gap-4">
-          <div className="order-1 lg:order-2 col-span-2">
+          <div className="order-2 lg:order-1 col-span-2">
             <h1 className="text-4xl font-semibold flex flex-col mb-6">
               <span>Hello! I’m Toby</span>{" "}
               <span className="text-primary">Frontend Developer</span>
@@ -35,7 +35,7 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <figure>
+          <figure className="order-1 lg:order-2">
             <Image
               src="https://plus.unsplash.com/premium_photo-1664536392779-049ba8fde933?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               width={300}

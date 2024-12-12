@@ -50,7 +50,7 @@ export default function MainContent({
                     <Navigation />
                   </div>
                   <div className="grow">
-                    <main className="bg-background rounded-lg border min-h-[90vh]">
+                    <main className="bg-background lg:rounded-2xl border min-h-[90vh]">
                       <div className="container py-6 lg:py-16 mb-6 max-w-screen-md space-y-14 lg:space-y-20">
                         {children}
                       </div>

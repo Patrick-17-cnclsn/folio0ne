@@ -130,7 +130,7 @@ export default function Navigation() {
                       <SidebarMenuItem key={item.title}>
                         <SidebarMenuButton
                           asChild
-                          className="text-base rounded-xl px-3 h-auto data-[active=true]:bg-background data-[active=true]:!font-semibold"
+                          className="text-base rounded-2xl px-3 h-auto data-[active=true]:bg-background data-[active=true]:!font-semibold"
                           isActive={
                             (item.url === "/" &&
                               replacedPathname === undefined) ||
@@ -138,7 +138,7 @@ export default function Navigation() {
                           }
                         >
                           <Link href={item.url} target={item.target}>
-                            {item.icon && <item.icon className="w-6 h-6" />}
+                            {item.icon && <item.icon className="!size-5" />}
                             {item.title}
                           </Link>
                         </SidebarMenuButton>
