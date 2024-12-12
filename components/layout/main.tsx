@@ -44,12 +44,7 @@ export default function MainContent({
             <SidebarProvider>
               <DownloadButton />
               <CustomSidebarTrigger />
-              <ThemeProvider
-                attribute="class"
-                defaultTheme="system"
-                enableSystem
-                disableTransitionOnChange
-              >
+              <ThemeProvider attribute="class" disableTransitionOnChange>
                 <div className="flex grow lg:p-4 lg:ps-0">
                   <div>
                     <Navigation />
