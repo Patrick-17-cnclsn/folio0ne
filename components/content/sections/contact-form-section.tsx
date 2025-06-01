@@ -11,7 +11,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,9 +19,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email(),
-  message: z
-    .string()
-    .min(2, { message: "Message must be at least 2 characters." }),
+  message: z.string().min(2, { message: "Message must be at least 2 characters." })
 });
 
 type ContactFormData = z.infer<typeof formSchema>;
@@ -32,8 +30,8 @@ export default function ContactFormSection() {
     defaultValues: {
       name: "",
       email: "",
-      message: "",
-    },
+      message: ""
+    }
   });
 
   const onSubmit = (data: ContactFormData) => {
@@ -43,10 +41,10 @@ export default function ContactFormSection() {
   return (
     <section>
       <header className="pb-8">
-        <h2 className="text-2xl font-semibold">Send a message</h2>
+        <h2 className="text-2xl font-semibold">Send a Message</h2>
       </header>
-      <Card className="bg-muted">
-        <CardContent className="pt-6">
+      <Card>
+        <CardContent>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <FormField

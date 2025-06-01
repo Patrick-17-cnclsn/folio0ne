@@ -3,18 +3,16 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <>
-      <footer className="py-6 text-sm text-muted-foreground">
-        <div className="container mx-auto max-w-screen-md flex justify-between items-center">
-          <div>© {new Date().getFullYear()} Neofolio</div>
-          <div>
-            Made by{" "}
-            <Link href="https://bundui.io/" target="_blank">
-              bundui.io
-            </Link>
-          </div>
+    <footer className="text-muted-foreground py-6 text-sm">
+      <div className="mx-auto flex max-w-screen-md items-center justify-between px-4">
+        <div>© {new Date().getFullYear()} Neofolio</div>
+        <div>
+          Made by{" "}
+          <Link href="https://bundui.io/" target="_blank">
+            bundui.io
+          </Link>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }

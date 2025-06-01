@@ -14,7 +14,7 @@ async function getBlogs() {
 }
 
 export async function generateMetadata({
-  params,
+  params
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
@@ -24,20 +24,22 @@ export async function generateMetadata({
   const blog = blogs.find((b: Blog) => b.slug === slug);
 
   return {
-    title: blog.title,
+    title: blog.title
   };
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
   const blogs = await getBlogs();
-  const blog = blogs.find((b: Blog) => b.slug === params.slug);
+  const blog = blogs.find((b: Blog) => b.slug === slug);
 
   return (
     <>
-      <BackButton url="/blog" />
       <section className="space-y-6">
-        <header className="lg:pb-8 space-y-6 lg:space-y-8">
-          <h1 className="text-3xl lg:text-4xl font-semibold">{blog.title}</h1>
+        <BackButton url="/blog" />
+        <header className="space-y-6 lg:space-y-8 lg:pb-8">
+          <h1 className="text-3xl font-semibold lg:text-4xl">{blog.title}</h1>
           <div className="grid grid-cols-2 text-sm">
             <div className="flex flex-col space-y-2">
               <span className="text-muted-foreground">Date</span>
@@ -49,18 +51,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </header>
+
         <figure>
           <Image
             width={300}
             height={300}
             src={blog.image}
-            className="w-full aspect-[4/3]"
+            className="aspect-[4/3] w-full"
             alt="..."
           />
         </figure>
         <article dangerouslySetInnerHTML={{ __html: blog.content }} />
       </section>
+
       <hr />
+
       <section className="space-y-8">
         <header>
           <h4 className="text-2xl font-semibold">Related posts</h4>

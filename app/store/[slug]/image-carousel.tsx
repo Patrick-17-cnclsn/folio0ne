@@ -4,9 +4,9 @@ import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
-  CarouselIndicator,
   CarouselItem,
-  CarouselNavigation,
+  CarouselNext,
+  CarouselPrevious
 } from "@/components/ui/carousel";
 
 export default function ImageCarousel({ images }: { images: string[] }) {
@@ -20,15 +20,15 @@ export default function ImageCarousel({ images }: { images: string[] }) {
                 width={300}
                 height={300}
                 src={image}
-                className="w-full aspect-[4/3]"
+                className="aspect-[4/3] w-full"
                 alt="..."
               />
             </figure>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselNavigation alwaysShow />
-      <CarouselIndicator />
+      <CarouselPrevious />
+      <CarouselNext />
     </Carousel>
   );
 }

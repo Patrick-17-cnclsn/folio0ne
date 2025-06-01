@@ -11,14 +11,12 @@ import Link from "next/link";
 import ProjectListItem from "@/components/content/project-list-item";
 
 async function getProjects() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "data/projects.json")
-  );
+  const data = await fs.readFile(path.join(process.cwd(), "data/projects.json"));
   return JSON.parse(data.toString());
 }
 
 export async function generateMetadata({
-  params,
+  params
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
@@ -28,23 +26,28 @@ export async function generateMetadata({
   const project = projects.find((b: Project) => b.slug === slug);
 
   return {
-    title: project.title,
+    title: `${project.title} - Neofolio Template`,
+    description:
+      "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
+    openGraph: {
+      images: ["https://bundui-images.netlify.app/templates/neofolio/seo.jpg"]
+    }
   };
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
   const projects = await getProjects();
-  const project = projects.find((b: Project) => b.slug === params.slug);
+  const project = projects.find((b: Project) => b.slug === slug);
 
   return (
     <>
-      <BackButton url="/projects" />
       <section className="space-y-6">
-        <header className="pb-4 lg:pb-8 space-y-6 lg:space-y-10">
-          <h1 className="text-3xl lg:text-4xl font-semibold">
-            {project.title}
-          </h1>
-          <div className="grid lg:grid-cols-3 text-sm space-y-4 lg:space-y-0">
+        <BackButton url="/projects" />
+        <header className="space-y-6 pb-4">
+          <h1 className="text-3xl font-semibold lg:text-4xl">{project.title}</h1>
+          <div className="grid space-y-4 text-sm lg:grid-cols-3 lg:space-y-0">
             <div className="flex flex-col space-y-2">
               <span className="text-muted-foreground">Date</span>
               <span>{project.date}</span>
@@ -59,7 +62,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             </div>
           </div>
           <div className="flex gap-4">
-            <Button asChild className="w-full lg:w-auto">
+            <Button asChild>
               <Link href={project.preview_url} target="_blank">
                 Preview <ExternalLinkIcon />
               </Link>
@@ -71,7 +74,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             width={300}
             height={300}
             src={project.cover_image}
-            className="w-full aspect-[4/3]"
+            className="aspect-[4/3] w-full"
             alt={project.title}
           />
         </figure>
@@ -82,7 +85,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <header>
           <h4 className="text-2xl font-semibold">More projects</h4>
         </header>
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid gap-6 lg:grid-cols-2">
           {projects.slice(0, 2).map((project: Project) => (
             <ProjectListItem project={project} key={project.id} />
           ))}

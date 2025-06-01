@@ -14,9 +14,9 @@ export default async function ReviewsSection() {
   return (
     <section>
       <header className="pb-8">
-        <h2 className="text-2xl font-semibold">What clients say</h2>
+        <h2 className="text-2xl font-medium">What Clients Say</h2>
       </header>
-      <div className="space-y-6">
+      <div className="space-y-4">
         {reviews.map((review: Review) => (
           <ReviewListItem review={review} key={review.id} />
         ))}

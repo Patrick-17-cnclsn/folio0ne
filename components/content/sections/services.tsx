@@ -6,25 +6,25 @@ const services: Service[] = [
   {
     title: "Product Design",
     price: "$90",
-    icon: PaletteIcon,
+    icon: PaletteIcon
   },
   {
     title: "Frontend Development",
     price: "$100",
-    icon: FolderCodeIcon,
+    icon: FolderCodeIcon
   },
   {
     title: "Branding",
     price: "$80",
-    icon: Building2Icon,
-  },
+    icon: Building2Icon
+  }
 ];
 
 export default function ServicesSection() {
   return (
     <section>
       <header className="pb-8">
-        <h2 className="text-2xl font-semibold">Services</h2>
+        <h2 className="text-2xl font-medium">Services</h2>
       </header>
       <div className="space-y-6">
         {services.map((service, key) => (

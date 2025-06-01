@@ -1,31 +1,31 @@
+import React from "react";
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import MainContent from "@/components/layout/main";
 
-const inter = Nunito({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
+const inter = Geist({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
   title: "Neofolio - Portfolio Template",
   description:
-    "With Neofolio, a dashboard-style portfolio website template built with Next.js and shadcn/ui, you can present yourself online in an ideal way.",
+    "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
   openGraph: {
-    images: ["https://bundui-images.netlify.app/templates/neofolio/seo.jpg"],
-  },
+    images: ["https://bundui-images.netlify.app/templates/neofolio/seo.jpg"]
+  }
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className}`} suppressHydrationWarning>
         <MainContent>{children}</MainContent>
       </body>
     </html>

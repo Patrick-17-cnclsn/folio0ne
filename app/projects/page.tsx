@@ -6,16 +6,17 @@ import ContactSection from "@/components/content/sections/contact-section";
 import { Project } from "@/type/project";
 
 async function getProjects() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "data/projects.json")
-  );
+  const data = await fs.readFile(path.join(process.cwd(), "data/projects.json"));
   return JSON.parse(data.toString());
 }
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Projects - Neofolio Template",
   description:
-    "With Neofolio, a dashboard-style portfolio website template built with Next.js and Shadcn/ui, you can present yourself online in an ideal way.",
+    "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
+  openGraph: {
+    images: ["https://bundui-images.netlify.app/templates/neofolio/seo.jpg"]
+  }
 };
 
 export default async function Page() {
@@ -24,14 +25,13 @@ export default async function Page() {
   return (
     <>
       <section>
-        <header className="pb-8 space-y-4 lg:mb-10">
-          <h1 className="text-3xl lg:text-4xl font-semibold">Projects</h1>
-          <p className="text-lg text-muted-foreground">
-            Explore cutting-edge design innovations that transform ideas into
-            reality
+        <header className="space-y-4 pb-8 lg:mb-10">
+          <h1 className="text-3xl font-semibold">Projects</h1>
+          <p className="text-muted-foreground">
+            Explore cutting-edge design innovations that transform ideas into reality
           </p>
         </header>
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid gap-6 lg:grid-cols-2">
           {projects.map((project: Project) => (
             <ProjectListItem project={project} key={project.id} />
           ))}

@@ -11,7 +11,12 @@ async function getBlogs() {
 }
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog - Neofolio Template",
+  description:
+    "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
+  openGraph: {
+    images: ["https://bundui-images.netlify.app/templates/neofolio/seo.jpg"]
+  }
 };
 
 export default async function Page() {
@@ -20,11 +25,10 @@ export default async function Page() {
   return (
     <>
       <section>
-        <header className="lg:pb-8 space-y-4 mb-10">
-          <h1 className="text-3xl lg:text-4xl font-semibold">Blog</h1>
-          <p className="text-lg text-muted-foreground">
-            Explore cutting-edge design innovations that transform ideas into
-            reality
+        <header className="mb-10 space-y-4 lg:pb-8">
+          <h1 className="text-3xl font-semibold">Blog</h1>
+          <p className="text-muted-foreground">
+            Explore cutting-edge design innovations that transform ideas into reality
           </p>
         </header>
         <div className="space-y-10">

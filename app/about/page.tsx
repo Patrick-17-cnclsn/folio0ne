@@ -5,32 +5,33 @@ import ToolsSection from "@/components/content/sections/tools-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About - Neofolio Template",
+  description:
+    "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
+  openGraph: {
+    images: ["https://bundui-images.netlify.app/templates/neofolio/seo.jpg"]
+  }
 };
-
 export default function Page() {
   return (
     <>
       <section>
-        <header className="pb-8 space-y-4 mb-10 grid lg:grid-cols-3 gap-4">
-          <div className="order-2 lg:order-1 col-span-2">
-            <h1 className="text-4xl font-semibold flex flex-col mb-6">
-              <span>Hello! I’m Toby</span>{" "}
-              <span className="text-primary">Frontend Developer</span>
+        <header className="mb-10 grid gap-4 space-y-4 pb-8 lg:grid-cols-3">
+          <div className="order-2 col-span-2 lg:order-1">
+            <h1 className="mb-6 flex flex-col text-4xl font-semibold">
+              <span>Hello! I’m Toby</span> <span className="text-primary">Frontend Developer</span>
             </h1>
             <div className="space-y-4">
-              <p className="text-lg text-muted-foreground">
-                I’m Toby, a frontend developer and product development
-                specialist from Poland with over 9 years of experience crafting
-                seamless user interfaces and scalable design systems for SaaS
-                products. My focus is on bridging the gap between user
-                experience and technical implementation.
+              <p className="text-muted-foreground text-lg">
+                I’m Toby, a frontend developer and product development specialist from Poland with
+                over 9 years of experience crafting seamless user interfaces and scalable design
+                systems for SaaS products. My focus is on bridging the gap between user experience
+                and technical implementation.
               </p>
-              <p className="text-lg text-muted-foreground">
-                Co-creator at Tetrisly, one of the most popular design system
-                starter kits. I’ve collaborated with companies like Phenom.com,
-                Bidroom.com, and Perfops.net, as well as numerous startups
-                worldwide, to deliver innovative solutions as a Lead Developer
+              <p className="text-muted-foreground text-lg">
+                Co-creator at Tetrisly, one of the most popular design system starter kits. I’ve
+                collaborated with companies like Phenom.com, Bidroom.com, and Perfops.net, as well
+                as numerous startups worldwide, to deliver innovative solutions as a Lead Developer
                 and Technical Consultant.
               </p>
             </div>

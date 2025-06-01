@@ -16,7 +16,7 @@ export default async function BlogsSection() {
       <header className="pb-8">
         <h2 className="text-2xl font-semibold">Blog</h2>
       </header>
-      <div className="space-y-6">
+      <div className="space-y-6 lg:space-y-10">
         {blogs.slice(0, 3).map((blog: Blog) => (
           <BlogListItem blog={blog} key={blog.id} />
         ))}

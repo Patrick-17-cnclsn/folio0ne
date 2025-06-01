@@ -20,19 +20,18 @@ export default function HeroSection() {
 
   return (
     <section className="space-y-4">
-      <h1 className="text-3xl lg:text-4xl font-semibold">
+      <h1 className="text-3xl font-medium lg:text-4xl">
         Hello! I’m Toby
-        <div className="flex flex-col sm:flex-row items-start sm:items-center">
+        <div className="flex flex-col items-start sm:flex-row sm:items-center">
           <span className="text-primary">Frontend Developer</span>
-          <div className="rounded-lg border px-3 py-2 inline-flex items-center gap-2 text-base lg:text-xl sm:ms-4 mt-3 lg:mt-0">
-            <MapPinIcon className="size-4 lg:size-6" /> Canada
+          <div className="mt-3 inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-base sm:ms-4 lg:mt-0">
+            <MapPinIcon className="size-4" /> Canada
           </div>
         </div>
       </h1>
-      <p className="text-muted-foreground text-lg">
-        Frontend developer and design system specialist with over 9 years of
-        experience focusing on user experience and design systems to create
-        user-centered designs in SaaS products.
+      <p className="text-muted-foreground">
+        Frontend developer and design system specialist with over 9 years of experience focusing on
+        user experience and design systems to create user-centered designs in SaaS products.
       </p>
       <div className="flex gap-4 pt-2">
         <Button asChild>

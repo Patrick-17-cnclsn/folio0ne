@@ -10,20 +10,16 @@ export default function ProductListItem({ product }: { product: Product }) {
           src={product.images[0]}
           width={300}
           height={300}
-          className="w-full aspect-[4-3]"
+          className="aspect-[4-3] w-full rounded-lg"
           alt={product.title}
         />
       </figure>
-      <div className="space-y-2 flex justify-between items-start gap-4">
+      <div className="flex items-start justify-between gap-4 space-y-2">
         <div className="space-y-2">
-          <h5 className="font-bold">{product.title}</h5>
-          <div className="text-sm text-muted-foreground">
-            {product.description}
-          </div>
+          <h5 className="font-semibold">{product.title}</h5>
+          <div className="text-muted-foreground text-sm">{product.description}</div>
         </div>
-        <div className="border rounded-lg bg-muted px-2 py-1">
-          ${product.price}
-        </div>
+        <div className="bg-muted rounded-lg border px-2 py-1">${product.price}</div>
       </div>
     </Link>
   );

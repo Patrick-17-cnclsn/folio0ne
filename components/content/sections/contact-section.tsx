@@ -4,29 +4,29 @@ import Link from "next/link";
 
 export default function ContactSection() {
   return (
-    <section className="p-6 !pb-6 border rounded-lg">
-      <header className="pb-8 space-y-2">
-        <h2 className="text-2xl font-semibold">Got questions?</h2>
+    <section className="rounded-lg border p-6 !pb-6">
+      <header className="space-y-2 pb-8">
+        <h2 className="text-2xl font-medium">Got questions?</h2>
         <p className="text-muted-foreground">
           I’m always excited to collaborate on innovative and exciting projects!
         </p>
       </header>
-      <div className="grid lg:grid-cols-2 lg:space-y-0 space-y-6">
+      <div className="grid space-y-6 lg:grid-cols-2 lg:space-y-0">
         <div className="flex gap-4">
-          <span className="flex items-center justify-center border border-primary/30 rounded-full bg-primary/15 size-14">
-            <MailIcon className="size-6" />
+          <span className="border-primary/10 bg-primary/10 flex size-14 items-center justify-center rounded-full border">
+            <MailIcon className="size-5" />
           </span>
           <div className="flex flex-col gap-1">
-            <span className="text-sm text-muted-foreground">E-mail</span>
+            <span className="text-muted-foreground">E-mail</span>
             <Link href="#">contact@shadcnuikit.com</Link>
           </div>
         </div>
         <div className="flex gap-4">
-          <span className="flex items-center justify-center border border-primary/30 rounded-full bg-primary/15 size-14">
-            <PhoneIcon className="size-6" />
+          <span className="border-primary/10 bg-primary/10 flex size-14 items-center justify-center rounded-full border">
+            <PhoneIcon className="size-5" />
           </span>
           <div className="flex flex-col gap-1">
-            <span className="text-sm text-muted-foreground">Phone</span>
+            <span className="text-muted-foreground">Phone</span>
             <Link href="#">+48 555 555 555</Link>
           </div>
         </div>
