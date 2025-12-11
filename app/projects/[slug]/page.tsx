@@ -30,7 +30,7 @@ export async function generateMetadata({
     description:
       "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
     openGraph: {
-      images: ["https://bundui-images.netlify.app/templates/neofolio/seo.jpg"]
+      images: ["/seo.jpg"]
     }
   };
 }
@@ -48,15 +48,15 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <header className="space-y-6 pb-4">
           <h1 className="text-3xl font-semibold lg:text-4xl">{project.title}</h1>
           <div className="grid space-y-4 text-sm lg:grid-cols-3 lg:space-y-0">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-1">
               <span className="text-muted-foreground">Date</span>
               <span>{project.date}</span>
             </div>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-1">
               <span className="text-muted-foreground">Service</span>
               <span>{project.services}</span>
             </div>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-1">
               <span className="text-muted-foreground">Client</span>
               <span>{project.client}</span>
             </div>
@@ -74,11 +74,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             width={300}
             height={300}
             src={project.cover_image}
-            className="aspect-[4/3] w-full"
+            className="w-full"
             alt={project.title}
           />
         </figure>
-        <article dangerouslySetInnerHTML={{ __html: project.content }} />
+        <article
+          className="[&_li]:text-muted-foreground [&_p]:text-muted-foreground"
+          dangerouslySetInnerHTML={{ __html: project.content }}
+        />
       </section>
       <hr />
       <section className="space-y-8">

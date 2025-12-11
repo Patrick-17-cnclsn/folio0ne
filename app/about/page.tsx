@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
   openGraph: {
-    images: ["https://bundui-images.netlify.app/templates/neofolio/seo.jpg"]
+    images: ["/seo.jpg"]
   }
 };
 export default function Page() {

@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import {
   BriefcaseBusinessIcon,
   DribbbleIcon,
+  ExternalLinkIcon,
   FacebookIcon,
   HomeIcon,
   RssIcon,
@@ -31,6 +32,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 import { NavGroup } from "@/type/navigation";
+import { Button } from "@/components/ui/button";
 
 const navLinks: NavGroup[] = [
   {
@@ -87,7 +89,7 @@ const navLinks: NavGroup[] = [
       },
       {
         title: "Dribbble",
-        url: "https://dribbble.com/",
+        url: "https://dribbble.com/TobyBelhome",
         icon: DribbbleIcon,
         target: "_blank"
       }
@@ -150,6 +152,15 @@ export default function Navigation() {
               </SidebarGroupContent>
             </React.Fragment>
           ))}
+          <div className="mt-4">
+            <Button className="w-full" asChild>
+              <Link
+                href="https://shadcnuikit.com/template/neofolio-portfolio-template"
+                target="_blank">
+                Get Template <ExternalLinkIcon />
+              </Link>
+            </Button>
+          </div>
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>

@@ -9,7 +9,7 @@ export default function BlogListItem({ blog }: { blog: Blog }) {
     <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-3 lg:space-x-4">
       <div className="order-2 col-span-2 flex grow flex-col space-y-4 leading-none lg:order-1">
         <span className="text-muted-foreground text-sm">{blog.date}</span>
-        <h4 className="text-2xl font-medium">{blog.title}</h4>
+        <h4 className="text-2xl leading-relaxed font-medium">{blog.title}</h4>
         <hr />
         <div>
           <Button variant="link" className="h-auto px-0! py-0!" asChild>
@@ -25,7 +25,7 @@ export default function BlogListItem({ blog }: { blog: Blog }) {
             src={blog.image}
             width={300}
             height={300}
-            className="aspect-[4-3] w-full rounded-lg"
+            className="aspect-square w-full rounded-lg object-cover"
             alt={blog.title}
           />
         </figure>

@@ -11,7 +11,7 @@ export default function ProjectListItem({ project }: { project: Project }) {
           src={project.cover_image}
           width={300}
           height={300}
-          className="aspect-[4-3] w-full rounded-lg"
+          className="aspect-4/3 w-full rounded-lg object-cover"
           alt={project.title}
         />
       </figure>

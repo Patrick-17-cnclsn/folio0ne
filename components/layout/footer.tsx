@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="text-muted-foreground py-6 text-sm">
-      <div className="mx-auto flex max-w-screen-md items-center justify-between px-4">
+      <div className="mx-auto flex items-center justify-between px-4">
         <div>© {new Date().getFullYear()} Neofolio</div>
         <div>
           Made by{" "}

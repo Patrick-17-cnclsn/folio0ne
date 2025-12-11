@@ -4,14 +4,14 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "plus.unsplash.com",
+        hostname: "**"
       },
       {
         protocol: "https",
-        hostname: "bundui-images.netlify.app",
-      },
-    ],
-  },
+        hostname: "**"
+      }
+    ]
+  }
 };
 
 export default nextConfig;

@@ -39,13 +39,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <section className="space-y-6">
         <BackButton url="/blog" />
         <header className="space-y-6 lg:space-y-8 lg:pb-8">
-          <h1 className="text-3xl font-semibold lg:text-4xl">{blog.title}</h1>
+          <h1 className="text-3xl leading-snug font-semibold lg:text-4xl">{blog.title}</h1>
           <div className="grid grid-cols-2 text-sm">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-1">
               <span className="text-muted-foreground">Date</span>
               <span>{blog.date}</span>
             </div>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-1">
               <span className="text-muted-foreground">Author</span>
               <span>{blog.author}</span>
             </div>

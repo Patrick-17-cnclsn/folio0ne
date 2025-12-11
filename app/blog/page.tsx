@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
   openGraph: {
-    images: ["https://bundui-images.netlify.app/templates/neofolio/seo.jpg"]
+    images: ["/seo.jpg"]
   }
 };
 
@@ -25,7 +25,7 @@ export default async function Page() {
   return (
     <>
       <section>
-        <header className="mb-10 space-y-4 lg:pb-8">
+        <header className="mb-10 space-y-3 lg:pb-8">
           <h1 className="text-3xl font-semibold">Blog</h1>
           <p className="text-muted-foreground">
             Explore cutting-edge design innovations that transform ideas into reality
