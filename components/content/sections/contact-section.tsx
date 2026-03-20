@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MailIcon, PhoneIcon } from "lucide-react";
 import Link from "next/link";
+import { CONFIG } from "@/lib/config";
 
 export default function ContactSection() {
   return (
@@ -18,7 +19,7 @@ export default function ContactSection() {
           </span>
           <div className="flex flex-col gap-1">
             <span className="text-muted-foreground">E-mail</span>
-            <Link href="#">contact@shadcnuikit.com</Link>
+            <Link href={`mailto:${CONFIG.email}`}>{CONFIG.email}</Link>
           </div>
         </div>
         <div className="flex gap-4">
@@ -27,7 +28,7 @@ export default function ContactSection() {
           </span>
           <div className="flex flex-col gap-1">
             <span className="text-muted-foreground">Phone</span>
-            <Link href="#">+48 555 555 555</Link>
+            <Link href={`tel:${CONFIG.phone.replace(/\s/g, "")}`}>{CONFIG.phone}</Link>
           </div>
         </div>
       </div>

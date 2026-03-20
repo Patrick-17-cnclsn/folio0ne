@@ -10,8 +10,7 @@ export function CustomSidebarTrigger() {
       variant="ghost"
       size="icon"
       onClick={toggleSidebar}
-      className="flex md:hidden items-center gap-2 absolute top-3 end-3"
-    >
+      className="absolute end-3 top-3 flex items-center gap-2 md:hidden">
       <MenuIcon />
     </Button>
   );

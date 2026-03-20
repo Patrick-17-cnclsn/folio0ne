@@ -9,10 +9,11 @@ const inter = Inter({
   subsets: ["latin"]
 });
 
+import { CONFIG } from "@/lib/config";
+
 export const metadata: Metadata = {
-  title: "Neofolio - Portfolio Template",
-  description:
-    "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
+  title: `${CONFIG.name} - Portfolio`,
+  description: CONFIG.bioShort,
   openGraph: {
     images: ["/seo.jpg"]
   }
@@ -24,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning>
       <body className={`${inter.className}`} suppressHydrationWarning>
         <MainContent>{children}</MainContent>
       </body>

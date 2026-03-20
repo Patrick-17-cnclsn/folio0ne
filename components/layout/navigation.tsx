@@ -34,6 +34,8 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { NavGroup } from "@/type/navigation";
 import { Button } from "@/components/ui/button";
 
+import { CONFIG } from "@/lib/config";
+
 const navLinks: NavGroup[] = [
   {
     title: "",
@@ -77,19 +79,19 @@ const navLinks: NavGroup[] = [
     items: [
       {
         title: "Twitter",
-        url: "https://x.com/TobyBelhome",
+        url: CONFIG.socials.twitter,
         icon: TwitterIcon,
         target: "_blank"
       },
       {
-        title: "Facebook",
-        url: "https://www.facebook.com/",
-        icon: FacebookIcon,
+        title: "Github",
+        url: CONFIG.socials.github,
+        icon: ExternalLinkIcon,
         target: "_blank"
       },
       {
         title: "Dribbble",
-        url: "https://dribbble.com/TobyBelhome",
+        url: CONFIG.socials.dribbble,
         icon: DribbbleIcon,
         target: "_blank"
       }
@@ -107,15 +109,11 @@ export default function Navigation() {
         <SidebarMenu>
           <SidebarMenuItem className="flex items-center space-x-4">
             <Avatar className="size-12">
-              <AvatarImage
-                className="h-full w-full rounded-full object-cover"
-                src="https://plus.unsplash.com/premium_photo-1664536392779-049ba8fde933?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-              <AvatarFallback>PC</AvatarFallback>
+              <AvatarFallback>{CONFIG.name[0]}</AvatarFallback>
             </Avatar>
             <div className="flex flex-col gap-1 leading-none">
-              <span className="font-semibold">Toby Belhome</span>
-              <span className="text-muted-foreground text-sm">Frontend Developer</span>
+              <span className="font-semibold">{CONFIG.name}</span>
+              <span className="text-muted-foreground text-sm">{CONFIG.role}</span>
             </div>
           </SidebarMenuItem>
         </SidebarMenu>
