@@ -6,4 +6,5 @@ export type Blog = {
   date: string;
   image: string;
   author: string;
+  url?: string;
 };

@@ -13,7 +13,7 @@ export default function BackButton({ url }: BackButtonProps) {
     <div>
       <Button variant="outline" asChild>
         <Link href={url}>
-          <ChevronLeftIcon /> Back to list
+          <ChevronLeftIcon /> Retour à la liste
         </Link>
       </Button>
     </div>

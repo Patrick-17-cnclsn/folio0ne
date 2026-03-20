@@ -7,9 +7,9 @@ export default function ContactSection() {
   return (
     <section className="rounded-lg border p-6 !pb-6">
       <header className="space-y-2 pb-8">
-        <h2 className="text-2xl font-medium">Got questions?</h2>
+        <h2 className="text-2xl font-medium">Des questions ?</h2>
         <p className="text-muted-foreground">
-          I’m always excited to collaborate on innovative and exciting projects!
+          Je suis toujours ravi de collaborer sur des projets innovants et passionnants !
         </p>
       </header>
       <div className="grid space-y-6 lg:grid-cols-2 lg:space-y-0">
@@ -27,7 +27,7 @@ export default function ContactSection() {
             <PhoneIcon className="size-5" />
           </span>
           <div className="flex flex-col gap-1">
-            <span className="text-muted-foreground">Phone</span>
+            <span className="text-muted-foreground">Téléphone</span>
             <Link href={`tel:${CONFIG.phone.replace(/\s/g, "")}`}>{CONFIG.phone}</Link>
           </div>
         </div>
@@ -35,7 +35,7 @@ export default function ContactSection() {
       <div className="mt-8">
         <Button variant="outline" className="w-full lg:w-auto" asChild>
           <Link href="https://cal.com/" target="_blank">
-            Schedule a call
+            Prendre rendez-vous
           </Link>
         </Button>
       </div>

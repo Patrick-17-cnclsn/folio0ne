@@ -13,8 +13,8 @@ export default function BlogListItem({ blog }: { blog: Blog }) {
         <hr />
         <div>
           <Button variant="link" className="h-auto px-0! py-0!" asChild>
-            <Link href={`/blog/${blog.slug}`}>
-              <ChevronRightIcon /> Read
+            <Link href={blog.url || `/blog/${blog.slug}`} target={blog.url ? "_blank" : undefined}>
+              <ChevronRightIcon /> Lire plus
             </Link>
           </Button>
         </div>

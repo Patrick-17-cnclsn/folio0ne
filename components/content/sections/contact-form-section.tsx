@@ -17,9 +17,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email(),
-  message: z.string().min(2, { message: "Message must be at least 2 characters." })
+  name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères." }),
+  email: z.string().email({ message: "Veuillez entrer une adresse email valide." }),
+  message: z.string().min(2, { message: "Le message doit contenir au moins 2 caractères." })
 });
 
 type ContactFormData = z.infer<typeof formSchema>;
@@ -41,7 +41,7 @@ export default function ContactFormSection() {
   return (
     <section>
       <header className="pb-8">
-        <h2 className="text-2xl font-semibold">Send a Message</h2>
+        <h2 className="text-2xl font-semibold">Envoyer un Message</h2>
       </header>
       <Card>
         <CardContent>
@@ -52,7 +52,7 @@ export default function ContactFormSection() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>Nom</FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
@@ -87,7 +87,7 @@ export default function ContactFormSection() {
                 )}
               />
               <Button type="submit" className="w-full">
-                Submit
+                Envoyer
               </Button>
             </form>
           </Form>

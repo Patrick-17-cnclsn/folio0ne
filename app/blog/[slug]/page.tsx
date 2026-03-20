@@ -46,7 +46,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <span>{blog.date}</span>
             </div>
             <div className="flex flex-col space-y-1">
-              <span className="text-muted-foreground">Author</span>
+              <span className="text-muted-foreground">Auteur</span>
               <span>{blog.author}</span>
             </div>
           </div>
@@ -68,7 +68,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
       <section className="space-y-8">
         <header>
-          <h4 className="text-2xl font-semibold">Related posts</h4>
+          <h4 className="text-2xl font-semibold">Articles similaires</h4>
         </header>
         <div className="space-y-10">
           {blogs.slice(0, 3).map((blog: Blog) => (
@@ -76,7 +76,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           ))}
         </div>
         <Button variant="outline" className="w-full">
-          All posts
+          Tous les articles
         </Button>
       </section>
       <ContactSection />

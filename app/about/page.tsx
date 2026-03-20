@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import { CONFIG } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: `About - ${CONFIG.name}`,
+  title: `À propos - ${CONFIG.name}`,
   description: CONFIG.bioShort,
   openGraph: {
     images: ["/seo.jpg"]
@@ -19,7 +19,7 @@ export default function Page() {
         <header className="mb-10 grid gap-4 space-y-4 pb-8 lg:grid-cols-3">
           <div className="order-2 col-span-2 lg:order-1">
             <h1 className="mb-6 flex flex-col text-4xl font-semibold">
-              <span>Hello! I’m {CONFIG.name}</span>{" "}
+              <span>Bonjour ! Je suis {CONFIG.name}</span>{" "}
               <span className="text-primary">{CONFIG.role}</span>
             </h1>
             <div className="space-y-4">

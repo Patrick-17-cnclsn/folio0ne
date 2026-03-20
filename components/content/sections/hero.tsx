@@ -34,16 +34,16 @@ export default function HeroSection() {
       <p className="text-muted-foreground">{CONFIG.bioShort}</p>
       <div className="flex gap-4 pt-2">
         <Button asChild>
-          <Link href="/about">About</Link>
+          <Link href="/about">À propos</Link>
         </Button>
         <Button variant="outline" onClick={() => handleCopy(CONFIG.email)}>
           {copied ? (
             <>
-              <CheckIcon /> Copied
+              <CheckIcon /> Copié
             </>
           ) : (
             <>
-              <CopyIcon /> Copy mail
+              <CopyIcon /> Copier le mail
             </>
           )}
         </Button>

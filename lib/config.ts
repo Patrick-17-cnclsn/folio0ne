@@ -9,10 +9,8 @@ export const CONFIG = {
   bioLong:
     "Je suis Patrick Offoumou, un développeur Fullstack junior  basé en France. Passionné par le développement web, je me spécialise dans la création d'applications modernes en utilisant les dernières technologies.",
   socials: {
-    twitter: "https://twitter.com/hassan",
     github: "https://github.com/Patrick-17-cnclsn",
-    linkedin: "",
-    dribbble: "https://dribbble.com/hassan"
+    linkedin: ""
   },
   services: [
     {

@@ -6,14 +6,10 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import {
   BriefcaseBusinessIcon,
-  DribbbleIcon,
   ExternalLinkIcon,
-  FacebookIcon,
   HomeIcon,
   RssIcon,
-  ShoppingCartIcon,
   SquareUserRoundIcon,
-  TwitterIcon,
   UserPenIcon
 } from "lucide-react";
 import {
@@ -42,22 +38,17 @@ const navLinks: NavGroup[] = [
     url: "#",
     items: [
       {
-        title: "Homepage",
+        title: "Accueil",
         url: "/",
         icon: HomeIcon
       },
       {
-        title: "Projects",
+        title: "Projets",
         url: "/projects",
         icon: BriefcaseBusinessIcon
       },
       {
-        title: "Store",
-        url: "/store",
-        icon: ShoppingCartIcon
-      },
-      {
-        title: "About",
+        title: "À propos",
         url: "/about",
         icon: SquareUserRoundIcon
       },
@@ -74,25 +65,13 @@ const navLinks: NavGroup[] = [
     ]
   },
   {
-    title: "Social",
+    title: "Réseaux Sociaux",
     url: "#",
     items: [
-      {
-        title: "Twitter",
-        url: CONFIG.socials.twitter,
-        icon: TwitterIcon,
-        target: "_blank"
-      },
       {
         title: "Github",
         url: CONFIG.socials.github,
         icon: ExternalLinkIcon,
-        target: "_blank"
-      },
-      {
-        title: "Dribbble",
-        url: CONFIG.socials.dribbble,
-        icon: DribbbleIcon,
         target: "_blank"
       }
     ]
@@ -150,15 +129,6 @@ export default function Navigation() {
               </SidebarGroupContent>
             </React.Fragment>
           ))}
-          <div className="mt-4">
-            <Button className="w-full" asChild>
-              <Link
-                href="https://shadcnuikit.com/template/neofolio-portfolio-template"
-                target="_blank">
-                Get Template <ExternalLinkIcon />
-              </Link>
-            </Button>
-          </div>
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>

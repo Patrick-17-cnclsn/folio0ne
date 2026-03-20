@@ -11,9 +11,9 @@ async function getProjects() {
 }
 
 export const metadata: Metadata = {
-  title: "Projects - Neofolio Template",
+  title: "Projets - Neofolio",
   description:
-    "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
+    "Portfolio de style tableau de bord. Construit avec Next.js, Tailwind CSS & shadcn/ui.",
   openGraph: {
     images: ["/seo.jpg"]
   }
@@ -26,9 +26,9 @@ export default async function Page() {
     <>
       <section>
         <header className="space-y-3 pb-8 lg:mb-10">
-          <h1 className="text-3xl font-semibold">Projects</h1>
+          <h1 className="text-3xl font-semibold">Projets</h1>
           <p className="text-muted-foreground">
-            Explore cutting-edge design innovations that transform ideas into reality
+            Explorez les innovations de conception de pointe qui transforment les idées en réalité
           </p>
         </header>
         <div className="grid gap-6 lg:grid-cols-2">

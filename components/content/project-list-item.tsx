@@ -9,9 +9,9 @@ export default function ProjectListItem({ project }: { project: Project }) {
       <figure>
         <Image
           src={project.cover_image}
-          width={300}
-          height={300}
-          className="aspect-4/3 w-full rounded-lg object-cover"
+          width={600}
+          height={400}
+          className="bg-muted aspect-video w-full rounded-lg object-contain"
           alt={project.title}
         />
       </figure>

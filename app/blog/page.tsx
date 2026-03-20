@@ -11,9 +11,9 @@ async function getBlogs() {
 }
 
 export const metadata: Metadata = {
-  title: "Blog - Neofolio Template",
+  title: "Blog - Neofolio",
   description:
-    "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
+    "Portfolio de style tableau de bord. Construit avec Next.js, Tailwind CSS & shadcn/ui.",
   openGraph: {
     images: ["/seo.jpg"]
   }
@@ -28,7 +28,8 @@ export default async function Page() {
         <header className="mb-10 space-y-3 lg:pb-8">
           <h1 className="text-3xl font-semibold">Blog</h1>
           <p className="text-muted-foreground">
-            Explore cutting-edge design innovations that transform ideas into reality
+            Découvrez des articles sur les dernières innovations technologiques et le développement
+            web
           </p>
         </header>
         <div className="space-y-10">

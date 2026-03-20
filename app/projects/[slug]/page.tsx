@@ -26,9 +26,9 @@ export async function generateMetadata({
   const project = projects.find((b: Project) => b.slug === slug);
 
   return {
-    title: `${project.title} - Neofolio Template`,
+    title: `${project.title} - Neofolio`,
     description:
-      "Dashboard style portfolio and directory website template. Built with Next.js, Tailwind CSS & shadcn/ui.",
+      "Portfolio de style tableau de bord. Construit avec Next.js, Tailwind CSS & shadcn/ui.",
     openGraph: {
       images: ["/seo.jpg"]
     }
@@ -64,17 +64,17 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <div className="flex gap-4">
             <Button asChild>
               <Link href={project.preview_url} target="_blank">
-                Preview <ExternalLinkIcon />
+                Aperçu <ExternalLinkIcon />
               </Link>
             </Button>
           </div>
         </header>
         <figure>
           <Image
-            width={300}
-            height={300}
+            width={1200}
+            height={800}
             src={project.cover_image}
-            className="w-full"
+            className="bg-muted w-full rounded-xl object-contain"
             alt={project.title}
           />
         </figure>
@@ -86,7 +86,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <hr />
       <section className="space-y-8">
         <header>
-          <h4 className="text-2xl font-semibold">More projects</h4>
+          <h4 className="text-2xl font-semibold">Plus de projets</h4>
         </header>
         <div className="grid gap-6 lg:grid-cols-2">
           {projects.slice(0, 2).map((project: Project) => (
@@ -94,7 +94,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           ))}
         </div>
         <Button variant="outline" className="w-full" asChild>
-          <Link href="/projects">All projects</Link>
+          <Link href="/projects">Tous les projets</Link>
         </Button>
       </section>
       <ContactSection />

@@ -17,15 +17,15 @@ export default async function SelectedProjectsSection() {
   return (
     <section>
       <header className="flex items-center justify-between pb-8">
-        <h2 className="text-2xl font-medium">Selected Work</h2>
+        <h2 className="text-2xl font-medium">Projets Sélectionnés</h2>
         <Button className="px-0!" variant="link" asChild>
           <Link href="/projects">
-            View All <ChevronRightIcon />
+            Voir Tout <ChevronRightIcon />
           </Link>
         </Button>
       </header>
       <div className="grid gap-6 lg:grid-cols-2">
-        {projects.slice(0, 2).map((project: Project) => (
+        {projects.slice(0, 4).map((project: Project) => (
           <ProjectListItem project={project} key={project.id} />
         ))}
       </div>
