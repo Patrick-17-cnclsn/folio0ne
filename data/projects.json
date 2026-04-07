@@ -12,14 +12,14 @@
   },
   {
     "id": 2,
-    "title": "Assistant IA (Ollama & Groq)",
-    "slug": "ai-assistant-ollama-groq",
-    "content": "<p>Une application d'assistant IA polyvalente intégrant deux plateformes : déploiement local via <strong>Ollama</strong> avec Streamlit et performance basée sur le cloud via <strong>Groq</strong>. Le système utilise <strong>SQLite</strong> pour une gestion robuste des données locales et de l'historique des conversations.</p><h3>Fonctionnalités Clés :</h3><ul><li>Inférence locale avec l'intégration Ollama</li><li>Traitement cloud haute vitesse avec Groq</li><li>Interface interactive propulsée par Streamlit</li><li>Persistance des données via SQLite</li></ul>",
+    "title": "Assistant IA (Scikit-learn & PyTorch)",
+    "slug": "ai-assistant-sklearn-pytorch",
+    "content": "<p>Une application d'assistant IA polyvalente utilisant <strong>Scikit-learn</strong> pour l'apprentissage automatique classique et <strong>PyTorch</strong> pour le deep learning. Le système utilise <strong>SQLite</strong> pour une gestion robuste des données locales et de l'historique des prédictions.</p><h3>Fonctionnalités Clés :</h3><ul><li>Modèles de classification avec Scikit-learn</li><li>Réseaux de neurones avec PyTorch</li><li>Interface interactive propulsée par Streamlit</li><li>Persistance des données via SQLite</li></ul>",
     "cover_image": "/Capture d'écran 2026-02-27 134947.png",
     "preview_url": "#",
     "date": "2024 - 2025",
     "client": "Projet Personnel",
-    "services": "Streamlit, Ollama, Groq, SQLite"
+    "services": "Streamlit, Scikit-learn, PyTorch, SQLite"
   },
   {
     "id": 3,
