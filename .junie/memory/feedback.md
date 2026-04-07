@@ -22,3 +22,11 @@
     "NEW INSTRUCTION": "WHEN user clicks any certification item THEN open its certificate URL in a new tab"
 }
 
+[2026-04-08 01:32] - Updated by Junie
+{
+    "TYPE": "correction",
+    "CATEGORY": "Certification dates",
+    "EXPECTATION": "The Java certification should show 2026 and the Python certification should show 2025, not 2024.",
+    "NEW INSTRUCTION": "WHEN certification is JavaFX THEN set its year to 2026; WHEN certification is Python (Hyperskill) THEN set its year to 2025"
+}
+
