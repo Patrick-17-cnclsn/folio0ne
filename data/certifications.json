@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Certification JavaFX - Devenir un expert en programmation Java GUI",
+    "issuer": "Udemy",
+    "date": "2024",
+    "description": "Certification Udemy attestant de la maîtrise du développement d'interfaces graphiques riches avec JavaFX, couvrant FXML, Scene Builder et l'architecture MVC.",
+    "url": "/UC-bb6351f2-951c-48d4-9da2-409bb4a9d13a.pdf"
+  },
+  {
+    "id": 2,
+    "title": "Introduction to Python",
+    "issuer": "JetBrains Academy (Hyperskill)",
+    "date": "2024",
+    "description": "Apprentissage des fondamentaux de Python, des structures de données et de la résolution de problèmes algorithmiques via la plateforme interactive JetBrains Academy.",
+    "url": "/Hyperskill Certificate Python Fundamentals with Practical Projects.pdf"
+  }
+]

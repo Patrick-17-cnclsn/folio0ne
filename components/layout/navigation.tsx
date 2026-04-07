@@ -5,6 +5,7 @@ import React from "react";
 
 import { usePathname } from "next/navigation";
 import {
+  AwardIcon,
   BriefcaseBusinessIcon,
   ExternalLinkIcon,
   HomeIcon,
@@ -45,6 +46,11 @@ const navLinks: NavGroup[] = [
         title: "Projets",
         url: "/projects",
         icon: BriefcaseBusinessIcon
+      },
+      {
+        title: "Certifications",
+        url: "/certifications",
+        icon: AwardIcon
       },
       {
         title: "À propos",
