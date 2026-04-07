@@ -24,7 +24,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem
 } from "@/components/ui/sidebar";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 import { NavGroup } from "@/type/navigation";
@@ -87,9 +86,6 @@ export default function Navigation() {
       <SidebarHeader className="mb-4">
         <SidebarMenu>
           <SidebarMenuItem className="flex items-center space-x-4">
-            <Avatar className="size-12">
-              <AvatarFallback>{CONFIG.name[0]}</AvatarFallback>
-            </Avatar>
             <div className="flex flex-col gap-1 leading-none">
               <span className="font-semibold">{CONFIG.name}</span>
               <span className="text-muted-foreground text-sm">{CONFIG.role}</span>

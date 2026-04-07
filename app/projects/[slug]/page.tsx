@@ -69,15 +69,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </Button>
           </div>
         </header>
-        <figure>
-          <Image
-            width={1200}
-            height={800}
-            src={project.cover_image}
-            className="bg-muted w-full rounded-xl object-contain"
-            alt={project.title}
-          />
-        </figure>
+        <div className="bg-muted relative aspect-square w-full overflow-hidden rounded-xl border lg:aspect-video">
+          <Image src={project.cover_image} alt={project.title} fill className="object-contain" />
+        </div>
         <article
           className="[&_li]:text-muted-foreground [&_p]:text-muted-foreground"
           dangerouslySetInnerHTML={{ __html: project.content }}
