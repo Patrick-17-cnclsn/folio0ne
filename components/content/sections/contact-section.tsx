@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { MailIcon, PhoneIcon } from "lucide-react";
+import { MailIcon } from "lucide-react";
 import Link from "next/link";
 import { CONFIG } from "@/lib/config";
 
@@ -22,22 +21,6 @@ export default function ContactSection() {
             <Link href={`mailto:${CONFIG.email}`}>{CONFIG.email}</Link>
           </div>
         </div>
-        <div className="flex gap-4">
-          <span className="border-primary/10 bg-primary/10 flex size-14 items-center justify-center rounded-full border">
-            <PhoneIcon className="size-5" />
-          </span>
-          <div className="flex flex-col gap-1">
-            <span className="text-muted-foreground">Téléphone</span>
-            <Link href={`tel:${CONFIG.phone.replace(/\s/g, "")}`}>{CONFIG.phone}</Link>
-          </div>
-        </div>
-      </div>
-      <div className="mt-8">
-        <Button variant="outline" className="w-full lg:w-auto" asChild>
-          <Link href="https://cal.com/" target="_blank">
-            Prendre rendez-vous
-          </Link>
-        </Button>
       </div>
     </section>
   );

@@ -52,15 +52,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         </header>
 
-        <figure>
-          <Image
-            width={300}
-            height={300}
-            src={blog.image}
-            className="aspect-[4/3] w-full"
-            alt="..."
-          />
-        </figure>
+        <div className="bg-muted relative aspect-square w-full overflow-hidden rounded-xl border lg:aspect-video">
+          <Image src={blog.image} alt={blog.title} fill className="object-contain" />
+        </div>
+
         <article dangerouslySetInnerHTML={{ __html: blog.content }} />
       </section>
 
