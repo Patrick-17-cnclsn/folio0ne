@@ -12,7 +12,7 @@ export default function BlogListItem({ blog }: { blog: Blog }) {
           src={blog.image}
           alt={blog.title}
           fill
-          className="object-contain transition-transform hover:scale-105"
+          className="object-cover transition-transform hover:scale-105"
         />
       </div>
       <div className="flex grow flex-col space-y-4 leading-none lg:py-4">

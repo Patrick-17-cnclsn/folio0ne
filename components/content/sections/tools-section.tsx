@@ -1,20 +1,17 @@
 export default function ToolsSection() {
   const tools = [
-    { name: "Next.js", category: "Framework" },
-    { name: "React Native", category: "Framework" },
-    { name: "Tailwind CSS", category: "Styling" },
+    { name: "Next.js", category: "Web" },
+    { name: "Three.js", category: "Web 3D" },
     { name: "TypeScript", category: "Langage" },
+    { name: "React Native / Expo", category: "Mobile" },
+    { name: "Kotlin Multiplatform", category: "Mobile" },
+    { name: "Swift", category: "Mobile" },
+    { name: "Java", category: "Langage" },
     { name: "Python", category: "Langage" },
-    { name: "Swift", category: "Langage" },
-    { name: "Kotlin", category: "Langage" },
-    { name: "Java / JavaFX", category: "Langage/Framework" },
-    { name: "C# / .NET", category: "Langage/Framework" },
-    { name: "Firebase", category: "Backend" },
-    { name: "SQL Server", category: "Base de données" },
-    { name: "SQLite", category: "Base de données" },
-    { name: "Scikit-learn / PyTorch", category: "IA" },
-    { name: "Git", category: "Outil" },
-    { name: "Figma", category: "Design" },
+    { name: "PostgreSQL", category: "Base de données" },
+    { name: "Docker", category: "DevOps" },
+    { name: "Git", category: "DevOps" },
+    { name: "Framer Motion", category: "Animations" }
   ];
 
   return (
@@ -29,8 +26,7 @@ export default function ToolsSection() {
         {tools.map((tool) => (
           <div
             key={tool.name}
-            className="bg-muted flex flex-col items-center justify-center rounded-lg p-4 text-center transition-colors hover:bg-muted/80"
-          >
+            className="bg-muted hover:bg-muted/80 flex flex-col items-center justify-center rounded-lg p-4 text-center transition-colors">
             <span className="font-medium">{tool.name}</span>
             <span className="text-muted-foreground text-xs">{tool.category}</span>
           </div>

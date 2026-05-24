@@ -2,7 +2,6 @@ import BackButton from "@/components/back-button";
 import ContactSection from "@/components/content/sections/contact-section";
 import { Button } from "@/components/ui/button";
 import { ExternalLinkIcon } from "lucide-react";
-import Image from "next/image";
 import { promises as fs } from "fs";
 import path from "path";
 import { Metadata } from "next";
@@ -56,10 +55,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <span className="text-muted-foreground">Service</span>
               <span>{project.services}</span>
             </div>
-            <div className="flex flex-col space-y-1">
-              <span className="text-muted-foreground">Client</span>
-              <span>{project.client}</span>
-            </div>
           </div>
           <div className="flex gap-4">
             <Button asChild>
@@ -69,9 +64,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </Button>
           </div>
         </header>
-        <div className="bg-muted relative aspect-square w-full overflow-hidden rounded-xl border lg:aspect-video">
-          <Image src={project.cover_image} alt={project.title} fill className="object-contain" />
-        </div>
         <article
           className="[&_li]:text-muted-foreground [&_p]:text-muted-foreground"
           dangerouslySetInnerHTML={{ __html: project.content }}

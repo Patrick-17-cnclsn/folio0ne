@@ -1,5 +1,4 @@
 import ContactSection from "@/components/content/sections/contact-section";
-import ServicesSection from "@/components/content/sections/services";
 import ToolsSection from "@/components/content/sections/tools-section";
 import { Metadata } from "next";
 import { CONFIG } from "@/lib/config";
@@ -27,7 +26,6 @@ export default function Page() {
           </div>
         </header>
       </section>
-      <ServicesSection />
       <ToolsSection />
       <ContactSection />
     </>

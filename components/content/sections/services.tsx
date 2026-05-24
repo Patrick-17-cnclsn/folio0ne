@@ -1,12 +1,13 @@
-import { Building2Icon, FolderCodeIcon, PaletteIcon, LucideIcon } from "lucide-react";
+import { DatabaseIcon, LayoutIcon, CpuIcon, FolderCodeIcon, SmartphoneIcon, LucideIcon } from "lucide-react";
 import ServiceListItem from "../service-list-item";
 import { Service } from "@/type/service";
 import { CONFIG } from "@/lib/config";
 
 const iconMap: Record<string, LucideIcon> = {
-  PaletteIcon,
-  FolderCodeIcon,
-  Building2Icon
+  DatabaseIcon,
+  LayoutIcon,
+  CpuIcon,
+  SmartphoneIcon
 };
 
 export default function ServicesSection() {

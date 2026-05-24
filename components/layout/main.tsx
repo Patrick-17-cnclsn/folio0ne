@@ -29,6 +29,10 @@ export default function MainContent({
 }>) {
   const pathname = usePathname();
 
+  if (pathname === "/stage/print") {
+    return <>{children}</>;
+  }
+
   return (
     <AnimatePresence mode={"wait"} initial={false}>
       <motion.div
