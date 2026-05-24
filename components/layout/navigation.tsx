@@ -5,13 +5,13 @@ import React from "react";
 
 import { usePathname } from "next/navigation";
 import {
-  AwardIcon,
   BriefcaseBusinessIcon,
   ExternalLinkIcon,
   HomeIcon,
   RssIcon,
   SquareUserRoundIcon,
-  UserPenIcon
+  UserPenIcon,
+  GraduationCapIcon
 } from "lucide-react";
 import {
   Sidebar,
@@ -48,17 +48,17 @@ const navLinks: NavGroup[] = [
         icon: BriefcaseBusinessIcon
       },
       {
-        title: "Certifications",
-        url: "/certifications",
-        icon: AwardIcon
-      },
-      {
         title: "À propos",
         url: "/about",
         icon: SquareUserRoundIcon
       },
       {
-        title: "Blog",
+        title: "Épreuve E6",
+        url: "/e6",
+        icon: GraduationCapIcon
+      },
+      {
+        title: "Veille",
         url: "/blog",
         icon: RssIcon
       },

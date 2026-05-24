@@ -1,32 +1,12 @@
 [
   {
-    "id": 1,
-    "title": "L'Avenir de JavaScript : Quoi de neuf en ES2025 ?",
-    "slug": "avenir-javascript-es2025",
-    "date": "2 Août 2024",
-    "content": "<p>JavaScript reste l'un des langages les plus populaires du développement web moderne. La mise à jour <strong>ES2025</strong> introduit des fonctionnalités passionnantes telles que le <code>pattern matching</code>, une meilleure gestion de l'<em>asynchronisme</em>, et plus encore.</p><h3>Pourquoi est-ce important ?</h3><p>Ces mises à jour améliorent la productivité des développeurs et rendent le code JavaScript plus facile à maintenir.</p>",
-    "image": "https://images.unsplash.com/photo-1432821596592-e2c18b78144f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "author": "Patrick Offoumou",
-    "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript"
-  },
-  {
     "id": 2,
-    "title": "Comment l'IA transforme le développement logiciel",
-    "slug": "ia-transformation-developpement-logiciel",
-    "date": "5 Août 2024",
-    "content": "<p>L'intelligence artificielle (IA) n'est plus seulement un mot à la mode ; elle devient un outil critique dans le développement de logiciels.</p><h3>Automatisation des tâches répétitives</h3><p>Les outils d'IA aident à automatiser les tâches répétitives comme les tests et la correction de bugs.</p><h4>La touche humaine</h4><p>Bien que l'IA soit puissante, les développeurs jouent toujours un rôle crucial dans la résolution créative de problèmes.</p>",
-    "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "MQTT : le protocole qui fait tourner l'IoT",
+    "slug": "mqtt-protocole-iot",
+    "date": "28 Mars 2026",
+    "content": "<p><strong>MQTT (Message Queuing Telemetry Transport)</strong> est un protocole de messagerie léger basé sur un modèle <em>publish/subscribe</em>. Conçu à l'origine pour les environnements à faible bande passante, il est aujourd'hui au cœur de la majorité des architectures IoT.</p><h3>Le modèle publish/subscribe</h3><p>Un <strong>broker</strong> (comme Mosquitto ou HiveMQ) centralise les messages. Les périphériques embarqués <em>publient</em> sur des topics (ex: <code>capteur/temperature</code>), et les applications <em>souscrivent</em> à ces topics pour recevoir les données en temps réel. Aucun couplage direct entre émetteur et récepteur.</p><h3>Intégration côté application</h3><p>Une app Next.js peut se connecter à un broker MQTT via WebSocket avec des librairies comme <code>mqtt.js</code>. Côté mobile, des solutions existent en Swift (<code>CocoaMQTT</code>) et en Kotlin. L'embarqué, lui, tourne souvent avec une librairie C légère sur un ESP32 ou STM32 avec module WiFi.</p><h3>Pourquoi s'y intéresser ?</h3><p>MQTT illustre parfaitement comment une architecture logicielle bien pensée peut piloter de l'infrastructure physique à distance. C'est un protocole simple à prendre en main, mais qui ouvre sur des systèmes distribués complexes : dashboards temps réel, alertes automatisées, supervision industrielle.</p>",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop",
     "author": "Patrick Offoumou",
-    "url": "https://www.zdnet.fr/actualites/comment-l-ia-transforme-le-developpement-logiciel-39958744.htm"
-  },
-  {
-    "id": 3,
-    "title": "Top 5 des langages de programmation pour 2024",
-    "slug": "top-langages-programmation-2024",
-    "date": "10 Août 2024",
-    "content": "<p>Le paysage technologique évolue rapidement, tout comme les langages de programmation.</p><h3>1. Python</h3><p>Toujours un favori pour la science des données et l'apprentissage automatique.</p><h3>2. Rust</h3><p>Connu pour sa performance et sa sécurité mémoire.</p><h4>Quel est votre choix ?</h4><p>Chaque langage a ses forces, choisissez donc en fonction des besoins de votre projet.</p>",
-    "image": "https://images.unsplash.com/photo-1501959915551-4e8d30928317?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "author": "Patrick Offoumou",
-    "url": "https://www.silicon.fr/top-10-langages-programmation-2024-474025.html"
+    "url": "https://mqtt.org/"
   }
 ]

@@ -1,46 +1,57 @@
 [
   {
     "id": 1,
-    "title": "Application Bancaire JavaFX",
-    "slug": "javafx-banking-application",
-    "content": "<p>Une application bancaire sécurisée basée sur JavaFX, conçue pour les clients et les administrateurs. Elle dispose d'une interface complète pour la gestion des comptes, le suivi des transactions et les contrôles administratifs.</p><h3>Fonctionnalités Clés :</h3><ul><li>Portails de connexion Admin et Client</li><li>Mises à jour du solde en temps réel</li><li>Gestion de l'historique des transactions</li><li>Outils d'administration des utilisateurs</li></ul>",
-    "cover_image": "/Capture d'écran 2026-02-27 134718.png",
-    "preview_url": "#",
+    "title": "EduConnect France - Moteur de Collecte",
+    "slug": "educonnect-scraping-worker",
+    "content": "<h3>Projet de Stage</h3><p>Développement d'un worker robuste utilisant <strong>Playwright</strong> pour extraire des données en temps réel depuis des sources de référence comme HelloWork, MaFormation, L'Étudiant et Eventbrite.</p><h3>Fonctionnalités Clés :</h3><ul><li>Scraping multi-sources asynchrone</li><li>CleanupService pour la déduplication des données</li><li>Normalisation des données (Organisations, Jobs, Formations, Événements)</li><li>Gestion des erreurs et logs de performance</li></ul>",
+    "cover_image": "",
+    "preview_url": "/stage/print",
     "date": "2025 - 2026",
-    "client": "Projet Personnel",
-    "services": "Développement Java, Design UI JavaFX"
+    "client": "EduConnect France",
+    "services": "TypeScript, Playwright, Node.js"
+  },
+  {
+    "id": 5,
+    "title": "Application Mobile de Prise de Notes",
+    "slug": "application-mobile-notes-react-native",
+    "content": "<h3>Projet d'Études (BTS SIO)</h3><p>Conception et développement d'une application mobile cross-platform dédiée à la gestion de notes personnelles. L'application permet d'organiser ses idées efficacement avec une interface fluide et intuitive.</p><h3>Fonctionnalités Clés :</h3><ul><li>Création, édition et suppression de notes</li><li>Authentification sécurisée via Firebase</li><li>Synchronisation en temps réel des données</li><li>Système de recherche et catégories personnalisables</li></ul>",
+    "cover_image": "",
+    "preview_url": "#",
+    "date": "2025",
+    "client": "Projet Académique",
+    "services": "React Native, Expo, Firebase"
   },
   {
     "id": 2,
-    "title": "Assistant IA (Scikit-learn & PyTorch)",
-    "slug": "ai-assistant-sklearn-pytorch",
-    "content": "<p>Une application d'assistant IA polyvalente utilisant <strong>Scikit-learn</strong> pour l'apprentissage automatique classique et <strong>PyTorch</strong> pour le deep learning. Le système utilise <strong>SQLite</strong> pour une gestion robuste des données locales et de l'historique des prédictions.</p><h3>Fonctionnalités Clés :</h3><ul><li>Modèles de classification avec Scikit-learn</li><li>Réseaux de neurones avec PyTorch</li><li>Interface interactive propulsée par Streamlit</li><li>Persistance des données via SQLite</li></ul>",
-    "cover_image": "/Capture d'écran 2026-02-27 134947.png",
-    "preview_url": "#",
-    "date": "2024 - 2025",
+    "title": "Application Bancaire JavaFX",
+    "slug": "javafx-banking-application",
+    "content": "<p>Une application bancaire sécurisée basée sur JavaFX, conçue pour les clients et les administrateurs. Elle dispose d'une interface complète pour la gestion des comptes, le suivi des transactions et les contrôles administratifs.</p><h3>Fonctionnalités Clés :</h3><ul><li>Portails de connexion Admin et Client</li><li>Mises à jour du solde en temps réel</li><li>Gestion de l'historique des transactions</li><li>Outils d'administration des utilisateurs</li></ul>",
+    "cover_image": "",
+    "preview_url": "https://github.com/Patrick-17-cnclsn/jClientBnk",
+    "date": "2026",
     "client": "Projet Personnel",
-    "services": "Streamlit, Scikit-learn, PyTorch, SQLite"
+    "services": "Java, JavaFX"
   },
   {
     "id": 3,
-    "title": "Système d'Intervention Matériel (C# & SQL Server)",
-    "slug": "systeme-intervention-materiel-csharp-sql",
-    "content": "<p>Une application robuste développée en <strong>C#</strong> avec une base de données <strong>Microsoft SQL Server</strong>. Elle est conçue pour gérer et suivre les interventions sur le matériel technique, offrant une solution efficace pour la maintenance et le suivi opérationnel.</p><h3>Fonctionnalités Clés :</h3><ul><li>Gestion des interventions matérielles</li><li>Base de données SQL Server centralisée</li><li>Interface de suivi en temps réel</li><li>Rapports de maintenance</li></ul>",
-    "cover_image": "/Capture d'écran 2026-03-20 131519.png",
-    "preview_url": "#",
-    "date": "2024 - 2026",
+    "title": "Assistant IA (Scikit-learn)",
+    "slug": "ai-assistant-sklearn",
+    "content": "<p>Une application d'assistant IA polyvalente utilisant <strong>Scikit-learn</strong> pour l'apprentissage automatique classique et <strong>PyTorch</strong> pour le deep learning. Le système utilise <strong>SQLite</strong> pour une gestion robuste des données locales et de l'historique des prédictions.</p><h3>Fonctionnalités Clés :</h3><ul><li>Modèles de classification avec Scikit-learn</li><li>Réseaux de neurones avec PyTorch</li><li>Interface interactive propulsée par Streamlit</li><li>Persistance des données via SQLite</li></ul>",
+    "cover_image": "",
+    "preview_url": "https://github.com/Patrick-17-cnclsn/FastAPI_IA",
+    "date": "2025",
     "client": "Projet Personnel",
-    "services": "Développement C#, Microsoft SQL Server, .NET"
+    "services": "Python, Scikit-learn, Streamlit"
   },
   {
     "id": 4,
-    "title": "Application de Gestion de Notes (Firebase & React Native)",
-    "slug": "gestion-notes-firebase-react-native",
-    "content": "<p>Une application de gestion de notes performante développée avec <strong>React Native</strong> et <strong>Expo</strong>. Elle utilise <strong>Firebase</strong> pour l'authentification des utilisateurs et la synchronisation en temps réel des données, offrant une expérience fluide sur mobile.</p><h3>Fonctionnalités Clés :</h3><ul><li>Synchronisation Cloud avec Firebase</li><li>Interface mobile réactive avec React Native</li><li>Gestion simplifiée avec Expo</li><li>Authentification sécurisée</li></ul>",
-    "cover_image": "/Screenshot_20260320_134101.png",
-    "preview_url": "#",
-    "date": "2024 - 2026",
+    "title": "FixInfo — Application desktop Windows Forms",
+    "slug": "systeme-intervention-materiel-csharp-sql",
+    "content": "<p>Projet d'initiation au développement d'applications de bureau avec base de données relationnelle. Implémente une authentification utilisateur et un formulaire de saisie pour enregistrer des équipements informatiques et leurs interventions de maintenance dans une base SQL Server.</p>",
+    "cover_image": "",
+    "preview_url": "https://github.com/Patrick-17-cnclsn/WindowsFormsAppFixInfoLrd",
+    "date": "2026",
     "client": "Projet Personnel",
-    "services": "Firebase, React Native, Expo"
+    "services": "C#, .NET, SQL Server"
   }
 ]

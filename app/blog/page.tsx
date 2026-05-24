@@ -11,9 +11,9 @@ async function getBlogs() {
 }
 
 export const metadata: Metadata = {
-  title: "Blog - Neofolio",
+  title: "Veille Technologique - Patrick Offoumou",
   description:
-    "Portfolio de style tableau de bord. Construit avec Next.js, Tailwind CSS & shadcn/ui.",
+    "Veille technologique sur les systèmes embarqués connectés et la communication logiciel-matériel.",
   openGraph: {
     images: ["/seo.jpg"]
   }
@@ -26,10 +26,9 @@ export default async function Page() {
     <>
       <section>
         <header className="mb-10 space-y-3 lg:pb-8">
-          <h1 className="text-3xl font-semibold">Blog</h1>
+          <h1 className="text-3xl font-semibold">Veille Technologique</h1>
           <p className="text-muted-foreground">
-            Découvrez des articles sur les dernières innovations technologiques et le développement
-            web
+            Systèmes embarqués connectés et communication logiciel-matériel.
           </p>
         </header>
         <div className="space-y-10">
