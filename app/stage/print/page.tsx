@@ -3,42 +3,45 @@
 import { CONFIG } from "@/lib/config";
 
 const STAGE_PROJECT = {
-  title: "EduConnect France — Moteur de Collecte",
+  title: "EduConnect France — Plateforme d'agrégation pour étudiants",
   client: "Anumerique",
   date: "2025 – 2026",
   type: "Projet de stage",
-  services: ["TypeScript", "Playwright", "Node.js"],
+  services: ["Next.js 15", "TypeScript", "Prisma ORM", "PostgreSQL", "Playwright", "Docker", "GitHub Actions", "TailwindCSS"],
   context:
-    "Dans le cadre de mon stage de BTS SIO SLAM au sein d'Anumerique, j'ai développé un moteur de collecte de données automatisé permettant d'agréger des offres d'emploi, de formations et d'événements provenant de plusieurs sources publiques.",
+    "Dans le cadre de mon stage de BTS SIO SLAM au sein d'Anumerique, j'ai contribué au développement d'EduConnect France — une plateforme web qui centralise automatiquement les formations, stages, salons d'emploi et événements disponibles en France, en scrapant plusieurs sites sources.",
   sections: [
     {
-      title: "Contexte du stage",
+      title: "Contexte du projet",
       content:
-        "Anumerique est une entreprise spécialisée dans le numérique. L'objectif du stage était de mettre en place un système de veille automatisée capable d'alimenter la base de données de la plateforme en temps quasi-réel, à partir de sources comme HelloWork, MaFormation, L'Étudiant et Eventbrite."
+        "EduConnect France est une plateforme développée en équipe chez Anumerique. Elle agrège automatiquement des données provenant de HelloWork (stages), MaFormation (formations), L'Étudiant (salons) et Eventbrite (événements) pour les centraliser dans une interface unique à destination des étudiants."
     },
     {
-      title: "Missions réalisées",
+      title: "Mes missions spécifiques",
       items: [
-        "Conception et développement d'un worker de scraping multi-sources avec Playwright",
-        "Implémentation d'un CleanupService pour la déduplication et la normalisation des données",
-        "Normalisation des entités : Organisations, Jobs, Formations, Événements",
-        "Gestion des erreurs, logs de performance et reprise sur incident",
-        "Tests d'intégration sur les différents connecteurs de sources"
+        "Réparation et stabilisation de l'orchestrateur de scraping — cerveau central coordonnant les 4 scrapers en séquence",
+        "Correction des erreurs de types TypeScript liées à l'injection de page Playwright (build sans erreurs)",
+        "Mise en place de la logique upsert sur les 4 scrapers : mise à jour si l'URL existe, création sinon",
+        "Développement du CleanupService : fusion des doublons, suppression des offres +30 jours et événements passés",
+        "Sécurisation de l'endpoint /api/scrape par token (SCRAPE_TOKEN) contre les lancements non autorisés",
+        "Refactoring complet : création de 7 fonctions utilitaires réutilisables, élimination de 100% du code dupliqué",
+        "Correction d'un bug critique sur le parsing des dates Eventbrite"
       ]
     },
     {
-      title: "Technologies utilisées",
+      title: "Stack technique",
       content:
-        "Le projet repose sur un stack Node.js avec TypeScript pour la robustesse du typage, et Playwright pour le scraping headless. L'architecture est modulaire : chaque source dispose de son propre connecteur, orchestré par un scheduler central."
+        "Next.js 15 (App Router) avec TypeScript pour le front et les API routes. Prisma ORM avec PostgreSQL pour la base de données (4 modèles : Job, Training, Event, Organization). Playwright pour le scraping headless. Docker et Docker Compose pour la conteneurisation. GitHub Actions pour le CI/CD (lint + build automatiques sur chaque PR)."
     },
     {
       title: "Compétences développées",
       items: [
-        "Automatisation de la collecte de données web (scraping asynchrone)",
-        "Conception de pipelines de transformation de données",
-        "Gestion des erreurs en environnement de production",
-        "Versioning Git et intégration continue",
-        "Collaboration en équipe agile"
+        "Pipeline de scraping asynchrone multi-sources avec Playwright",
+        "Conception d'une logique upsert robuste pour éviter les doublons en base",
+        "Maintenance automatique des données (nettoyage, fusion, expiration)",
+        "Sécurisation d'API par token",
+        "Refactoring et création de fonctions utilitaires réutilisables",
+        "Travail en équipe avec Git, GitHub Actions et CI/CD"
       ]
     }
   ]
@@ -57,7 +60,6 @@ export default function StagePrintPage() {
       `}</style>
 
       <div className="mx-auto max-w-3xl bg-white px-10 py-8 text-sm text-gray-800">
-        {/* Bouton impression */}
         <div className="no-print mb-6 flex justify-end gap-3">
           <button
             onClick={() => window.print()}
@@ -66,7 +68,6 @@ export default function StagePrintPage() {
           </button>
         </div>
 
-        {/* En-tête document */}
         <header className="mb-8 overflow-hidden rounded-xl">
           <div className="bg-[#043c85] px-8 py-6 text-white">
             <p className="text-xs font-semibold tracking-widest uppercase text-blue-200">
@@ -76,7 +77,6 @@ export default function StagePrintPage() {
             <p className="mt-1 text-sm text-blue-100">{STAGE_PROJECT.type}</p>
           </div>
 
-          {/* Méta-infos */}
           <div className="grid grid-cols-3 divide-x border border-t-0 border-gray-200 bg-gray-50">
             <div className="px-5 py-3">
               <p className="text-xs font-semibold tracking-wide text-gray-400 uppercase">Étudiant</p>
@@ -93,7 +93,6 @@ export default function StagePrintPage() {
           </div>
         </header>
 
-        {/* Technologies */}
         <div className="mb-8 flex flex-wrap gap-2">
           {STAGE_PROJECT.services.map((tech) => (
             <span
@@ -104,12 +103,10 @@ export default function StagePrintPage() {
           ))}
         </div>
 
-        {/* Résumé */}
         <div className="mb-8 rounded-lg border-l-4 border-[#043c85] bg-blue-50/50 px-5 py-4">
           <p className="text-sm leading-relaxed text-gray-700">{STAGE_PROJECT.context}</p>
         </div>
 
-        {/* Sections */}
         <div className="space-y-7">
           {STAGE_PROJECT.sections.map((section) => (
             <section key={section.title}>
@@ -133,7 +130,6 @@ export default function StagePrintPage() {
           ))}
         </div>
 
-        {/* Pied de page */}
         <footer className="mt-12 border-t border-gray-200 pt-5 text-xs text-gray-400">
           <div className="flex justify-between">
             <span>{CONFIG.name} — {CONFIG.email}</span>
