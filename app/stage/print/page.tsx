@@ -23,7 +23,6 @@ const STAGE_PROJECT = {
         "Correction des erreurs de types TypeScript liées à l'injection de page Playwright (build sans erreurs)",
         "Mise en place de la logique upsert sur les 4 scrapers : mise à jour si l'URL existe, création sinon",
         "Développement du CleanupService : fusion des doublons, suppression des offres +30 jours et événements passés",
-        "Sécurisation de l'endpoint /api/scrape par token (SCRAPE_TOKEN) contre les lancements non autorisés",
         "Refactoring complet : création de 7 fonctions utilitaires réutilisables, élimination de 100% du code dupliqué",
         "Correction d'un bug critique sur le parsing des dates Eventbrite"
       ]
