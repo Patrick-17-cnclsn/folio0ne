@@ -10,8 +10,7 @@ import {
   HomeIcon,
   RssIcon,
   SquareUserRoundIcon,
-  UserPenIcon,
-  GraduationCapIcon
+  UserPenIcon
 } from "lucide-react";
 import {
   Sidebar,
@@ -51,11 +50,6 @@ const navLinks: NavGroup[] = [
         title: "À propos",
         url: "/about",
         icon: SquareUserRoundIcon
-      },
-      {
-        title: "Épreuve E6",
-        url: "/e6",
-        icon: GraduationCapIcon
       },
       {
         title: "Veille",
