@@ -23,7 +23,7 @@ export default function HeroSection() {
   return (
     <section className="space-y-4">
       <h1 className="text-3xl font-medium lg:text-4xl">
-        Hello! I’m {CONFIG.name}
+        Salut ! je suis {CONFIG.name}
         <div className="mt-1 flex flex-col items-start sm:flex-row sm:items-center">
           <span className="text-primary">{CONFIG.role}</span>
           <div className="mt-3 inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-base sm:ms-4 lg:mt-0">

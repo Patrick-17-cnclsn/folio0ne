@@ -188,7 +188,6 @@ export default function Page() {
                 "Stabilisation de l'orchestrateur coordonnant les scrapers en séquence",
                 "Logique upsert : mise à jour si l'offre existe, création sinon — zéro doublon",
                 "CleanupService : fusion des doublons, suppression des offres expirées",
-                "Sécurisation de l'API /api/scrape par token (SCRAPE_TOKEN)",
                 "Refactoring : 7 fonctions utilitaires partagées, suppression du code dupliqué"
               ].map((item, i) => (
                 <li key={i} className="flex gap-2 text-sm text-muted-foreground">
